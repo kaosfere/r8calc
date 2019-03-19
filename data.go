@@ -43,6 +43,7 @@ func parseTrain(filename string) []RailVehicle {
 	return d.TrainList.TrainLoader.UnitLoaderList.Vehicles
 }
 
+// These values are scraped using the parse.go tool in the tools/ directory.
 func carWeight(car string) float64 {
 	weights := map[string]float64{
 		"R8_CoveredHopper_ACF2700_CSX1":         28,
@@ -389,6 +390,10 @@ func carWeight(car string) float64 {
 	return weights[car]
 }
 
+// In order, the ints in the 6-item arrays are the rows in which we will
+// find engine counts for each engine in the front, middle, and rear
+// engine groups, first for counting axles, then for counting brakes.  This
+// is really ugly and can definitely be cleaned up if this thing persists.
 func bnsfCells(model string) [6]int {
 	var cells [6]int
 	switch model {

@@ -135,6 +135,16 @@ func loadSheet(filename string, train train) error {
 		rearEngines = engineGroups[2]
 	}
 
+	// This is just about the ugliest bit of what's going on here.  It relies
+	// upon the names being used for engines in the train XML file to have the
+	// model of the loco used consistently and seperated from the rest by
+	// underscores -- this is currently the case, but should by no means be
+	// considered stable.
+	//
+	// We could also benefit from using something other than array indices to
+	// refer to the columns to populate for axles and bakes for each engine,
+	// just to make it a little more clear what's going in here.  Next
+	// version...
 	for _, engine := range headEngines {
 		code := strings.Split(engine.model, "_")[1]
 		incrementCell(bnsfSheet, bnsfCells(code)[0], 2)

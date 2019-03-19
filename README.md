@@ -6,6 +6,6 @@ To run, run `r8calc` on the command line with the name of the XML file and the n
 
 This will parse your train file, open the spreadsheet in Excel, and populate all the data fields for both BNFS and UP with data taken from your train file.  *Please note*:  For now, it is best if this, the spreadsheet, and the train file are all in the same directory.  If people find this useful I'll add more intelligent path handling in the future.
 
-Thanks to:  The Depot, from whose [Rolling Stock Database] I grabbed car empty weight information, and whose forum is a great recess for folks like me who are just learning this sim; and to Deezle for taking the time to put his great tool together.
+Thanks to:  The Depot, from whose [Rolling Stock Database](https://www.thedepotserver.com/reference/rollingstock/) I grabbed car empty weight information, and whose forum is a great recess for folks like me who are just learning this sim; and to Deezle for taking the time to put his great tool together.
 
 You're free to do with this as you wish, but please keep credit to The Depot as long as the information they painstakingly gathered is in the `carWeight()` function.

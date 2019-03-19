@@ -1,0 +1,1 @@
+Assorted tools.   `parse.go` provides a *super* quick-and-dirty scraper for building a map definition containing car weight information.  That's all that's here now.
